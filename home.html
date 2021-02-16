@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            if (localStorage.getItem("userName") == null) {
+                var home = document.getElementById("home");
+                home.classList.add('add');
+                home.innerHTML = `
+                <div class='show' >You Should Login First.<a href="index.html">Login</a></div>
+                `;
+            } else {
+                var welcome = document.getElementById("username");
+                var name = JSON.parse(localStorage.getItem("userName"));
+                welcome.innerHTML += "Welcome " + name;
+            }
+
+        }
+    </script>
+</head>
+
+<body id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark group">
+        <div class="container">
+            <a class="navbar-brand" href="#">SMART LOGIN</a>
+            <a onclick="logout()" class="nav-link btn btn-outline-info" href="index.html">Logout</a>
+        </div>
+    </nav>
+    <div class="container text-center h-100 d-flex align-items-center justify-content-center">
+        <div class="group w-75 p-5">
+            <h1 id="username"></h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

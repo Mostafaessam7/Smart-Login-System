@@ -1,0 +1,85 @@
+body {
+    background: url("../images/bg-1.jpg") no-repeat center center fixed;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+    right: 0;
+    left: 0;
+    
+}
+
+.signin-form , .signup-form {
+    width: 50%;
+    height: auto;
+    background: rgba(3, 3, 3, 0.5);
+    margin: 50px auto;
+    box-shadow: 1px 1px 50px #000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email]   {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    outline: none;
+    border-radius: 0;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.form-control:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-radius: 0;
+    color: #fff;
+}
+
+
+
+p {
+    color: red;
+    font-size: 14px;
+}
+
+.signin-form h1, .signup-form h1 {
+    color: #17a2b8;
+    margin-bottom: 20px;
+}
+
+.group {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.show {
+    width: 40%;
+    height: 20%;
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.show a {
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .signin-form , .signup-form {
+        width: 90%;
+    }
+}
+
